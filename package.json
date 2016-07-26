@@ -1,13 +1,22 @@
 {
-  "description": "NativeScript Application",
-  "license": "SEE LICENSE IN <your-license-filename>",
-  "readme": "NativeScript Application",
-  "repository": "<fill-your-repository-here>",
+  "name": "homie",
+  "version": "0.0.1",
+  "description": "App for Controlling Rosie-based home automations systems",
+  "license": "Apache 2.0",
+  "author": "Brandon Satrom <bsatrom@gmail.com> (https://www.breakingthings.io)",
+  "readme": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rosie-home/homie"
+  },
   "nativescript": {
-    "id": "org.nativescript.homie",
+    "id": "org.rosie.homie",
     "tns-ios": {
       "version": "2.1.1"
-    }
+    },
+    "tns-android": {
+			"version": "2.1.1"
+		}
   },
   "dependencies": {
     "@angular/common": "2.0.0-rc.3",
@@ -19,11 +28,18 @@
     "@angular/platform-server": "2.0.0-rc.3",
     "@angular/router": "3.0.0-alpha.7",
     "@angular/router-deprecated": "2.0.0-rc.2",
-    "nativescript-angular": "0.2.0",
+    "email-validator": "1.0.4",
+		"nativescript-angular": "0.2.0",
+		"nativescript-social-share": "1.2.0",
     "tns-core-modules": "^2.1.0"
   },
   "devDependencies": {
-    "nativescript-dev-typescript": "^0.3.2",
-    "typescript": "^1.8.10"
+    "babel-traverse": "6.8.0",
+		"babel-types": "6.8.1",
+		"babylon": "6.8.0",
+		"filewalker": "0.1.2",
+		"lazy": "1.0.11",
+		"nativescript-dev-typescript": "^0.3.2",
+		"typescript": "^1.8.10"
   }
 }
