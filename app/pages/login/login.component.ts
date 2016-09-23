@@ -14,7 +14,7 @@ import {setHintColor} from "../../utils/hint-util";
   templateUrl: "pages/login/login.html",
   styleUrls: ["pages/login/login-common.css", "pages/login/login.css"],
 })
-export class LoginPage implements OnInit {
+export class LoginComponent implements OnInit {
   user: User;
   isLoggingIn = true;
 

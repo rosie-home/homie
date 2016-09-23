@@ -10,7 +10,7 @@ var socialShare = require("nativescript-social-share");
   styleUrls: ["pages/list/list-common.css", "pages/list/list.css"],
   providers: [GroceryListService]
 })
-export class ListPage implements OnInit {
+export class ListComponent implements OnInit {
   groceryList: Array<Grocery> = [];
   grocery: string = "";
   isLoading = false;

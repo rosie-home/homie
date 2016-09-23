@@ -1,19 +1,19 @@
-import {Injectable} from "@angular/core";
-import {Http, Headers} from "@angular/http";
-import {Config} from "../config";
-import {Grocery} from "./grocery";
-import {Observable} from "rxjs/Rx";
+import { Injectable } from "@angular/core";
+import { Http, Headers } from "@angular/http";
+import { Config } from "../config";
+import { Grocery } from "./grocery";
+import { Observable } from "rxjs/Rx";
 import "rxjs/add/operator/map";
 
 @Injectable()
 export class GroceryListService {
-  constructor(private _http: Http) {}
+  constructor(private http: Http) {}
 
   load() {
     let headers = new Headers();
     headers.append("Authorization", "Bearer " + Config.token);
 
-    return this._http.get(Config.apiUrl + "Groceries", {
+    return this.http.get(Config.apiUrl + "Groceries", {
       headers: headers
     })
     .map(res => res.json())
@@ -32,7 +32,7 @@ export class GroceryListService {
     headers.append("Authorization", "Bearer " + Config.token);
     headers.append("Content-Type", "application/json");
 
-    return this._http.post(
+    return this.http.post(
       Config.apiUrl + "Groceries",
       JSON.stringify({ Name: name }),
       { headers: headers }
@@ -49,7 +49,7 @@ export class GroceryListService {
     headers.append("Authorization", "Bearer " + Config.token);
     headers.append("Content-Type", "application/json");
 
-    return this._http.delete(
+    return this.http.delete(
       Config.apiUrl + "Groceries/" + id,
       { headers: headers }
     )
